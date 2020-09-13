@@ -9,11 +9,10 @@ summarizer can be installed in two ways.
 
 1. Directly Pulling and Running the image.
 
-Currently, we have created a docker registry that stores the image. It's hosted in http://rk-sragen.site:5043/nethive-cvss. You can login as a pull-only user with the following credentials.
+Currently, we have created a docker registry that stores the image. It's hosted in https://nethive.me. You can login as a pull-only user with the following credentials.
 
     $ docker login -u cvss -p pullmyimage nethive.me/cvss
     $ docker pull nethive.me/cvss
-    $ docker tag nethive-cvss nethive.me/cvss
 
 this would pull the image directly into your docker system and install it, depending on your connection speed, it may take a while. The image is also being re-build everyday with Jenkins CI. So that newer users can quickly catch up to speed to the latest changes in NVD data as the image builds includes NVD data integration as well.
 
@@ -27,7 +26,7 @@ If you don't like typing docker login passwords and/or prefer to build it your o
 
         $ git clone https://github.com/Falanteris/docker-nethive-cvss
         $ cd docker-nethive-cvss
-        $ docker build -t nethive-cvss .
+        $ docker build -t nethive.me/cvss .
         $ ./cvss
 
 And we're done!. The nethive-cvss system would run smoothly. Of course you can edit the *cvss* script to fit your system architecture. But other than that, it should accomplish the same thing that the first method did. Only with more processing power required since you would need to build the image yourself. 
